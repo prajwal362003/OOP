@@ -51,9 +51,38 @@ class account{
     string name;
 };
 
+// Constructor
+class A{
+  public:
+
+  // Default Constructor
+    // A(){
+    //   cout << "Constructor called" << endl;
+    // }
+  
+    // Parameterized Constructor
+    A(string str,int firstVal, int secondVal){
+      cout << "Parameterized Constructor called" << endl;
+      s1 = str;
+      a = firstVal;
+      b = secondVal;
+    }
+    string s1;
+    int a;
+    int b;
+
+    void getInfo(){
+      cout << "Name" << s1 << endl;
+      cout << "Value 1" << a << endl;
+      cout << "Value 2" << b << endl;
+    }
+};
+
+
 int main(){
   Student s1;
   Student s2;
+  A a("Prajwal",4,6);    // constructor called
 
   s1.name = "Prajwal";
   s1.roll = 1;
@@ -69,6 +98,6 @@ int main(){
   cout << "Teacher age is " << t1.age << endl;
   cout << "Teacher salary is " << t1.getSalary() << endl;
 
-
+  a.getInfo();
   return 0;
 }
