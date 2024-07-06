@@ -78,6 +78,25 @@ class A{
     }
 };
 
+// this operator
+class T{
+  public:
+
+    string name,caste;
+    int roll;
+
+    T(string name,int roll,string caste){
+      this -> name = name;
+      this -> roll = roll;
+      this -> caste = caste;
+    }
+
+    void getThisInfo(){
+      cout << "Name : " << name << endl;
+      cout << "Roll : " << roll << endl;
+      cout << "Caste : " << caste << endl;
+    }
+};
 
 int main(){
   Student s1;
@@ -99,5 +118,10 @@ int main(){
   cout << "Teacher salary is " << t1.getSalary() << endl;
 
   a.getInfo();
+
+  // this operator obj;
+  T t("Prajwal",23,"Teli");
+  t.getThisInfo();
+
   return 0;
 }
