@@ -123,5 +123,9 @@ int main(){
   T t("Prajwal",23,"Teli");
   t.getThisInfo();
 
+  // Copy Constructor
+  A a2(a);
+  a2.getInfo();
+
   return 0;
 }
