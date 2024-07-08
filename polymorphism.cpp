@@ -66,6 +66,18 @@ class Child:public Parent{
     }
 };
 
+// Abstract Classes & Pure Virtual Function
+class Shape{
+  virtual void draw() = 0;    // pure virtual function
+};
+
+class Circle:public Shape{
+  public:
+    void draw(){
+      cout << "Drawing a Circle" << endl;
+    }
+};
+
 int main(){
   Student s1("Prajwal",20);
 
@@ -88,6 +100,10 @@ int main(){
 
   Child c1;
   c1.getData();
+
+  // Abstract Classes
+  Circle c;
+  c.draw();
 
   return 0;
 }
