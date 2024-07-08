@@ -30,6 +30,27 @@ class F{
     }
 };
 
+// Operator Overloading
+class P{
+  int a;
+  public:
+    
+    void getData(){
+      cout << "Enter the value of a: ";
+      cin >> a;
+    }
+
+    void showData(){
+      cout << "Value of a is " << a << endl;
+    }
+
+    P operator+(P bb){
+      P cc;
+      cc.a = a + bb.a;
+      return cc;
+    }
+};
+
 int main(){
   Student s1("Prajwal",20);
 
@@ -37,6 +58,14 @@ int main(){
   F f;
   f.addition(5,4);
   f.addition(5,4,3);
+
+  // Operator Overloading
+  P aa,bb,cc;
+  aa.getData();
+  bb.getData();
+
+  cc = aa + bb;
+  cc.showData();
 
   return 0;
 }
