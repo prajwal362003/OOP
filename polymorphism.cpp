@@ -30,7 +30,7 @@ class F{
     }
 };
 
-// Operator Overloading
+// // Operator Overloading
 class P{
   int a;
   public:
@@ -51,6 +51,21 @@ class P{
     }
 };
 
+// Function Overriding
+class Parent{
+  public:
+    void getData(){
+      cout << "Parent Class" << endl;
+    }
+};
+
+class Child:public Parent{
+  public:
+    void getData(){
+      cout << "Child Class" << endl;
+    }
+};
+
 int main(){
   Student s1("Prajwal",20);
 
@@ -66,6 +81,13 @@ int main(){
 
   cc = aa + bb;
   cc.showData();
+
+  // Function Overriding
+  Parent p1;
+  p1.getData();
+
+  Child c1;
+  c1.getData();
 
   return 0;
 }
